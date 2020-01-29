@@ -38,6 +38,10 @@ def proof_of_work(last_proof):
   # of our work
   return incrementor
 
+@app.route('/')
+def root():
+  return {'data': 'Simple Chain Test Node'}
+
 @app.route('/new')
 def account():
   new_address = hashlib.sha256(str(time.time()).encode('utf-8')).hexdigest()

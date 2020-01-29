@@ -40,7 +40,7 @@ def proof_of_work(last_proof):
 
 @app.route('/')
 def root():
-  return {'data': 'Simple Chain Test Node'}
+  return {'data': 'Simple Chain Test Node', 'Miner Address': miner_address}
 
 @app.route('/new')
 def account():
